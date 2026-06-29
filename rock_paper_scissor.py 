@@ -1,0 +1,33 @@
+import random
+
+a = ("rock", "paper", "scissor")
+
+user = input("Enter rock, paper or scissor: ").lower()
+computer = random.choice(a)
+
+print("Computer choice:", computer)
+
+if user == computer:
+    print("Match draw!")
+
+elif user == "paper":
+    if computer == "rock":
+        print("User win!")
+    else:
+        print("Computer win!")
+
+elif user == "scissor":
+    if computer == "paper":
+        print("User win!")
+    else:
+        print("Computer win!")
+
+elif user == "rock":
+    if computer == "scissor":
+        print("User win!")
+    else:
+        print("Computer win!")
+
+else:
+    print("Invalid choice")
+    print("Sorry, try next time")
